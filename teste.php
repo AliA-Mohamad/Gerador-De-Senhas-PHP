@@ -4,10 +4,11 @@ require 'vendor/autoload.php';
 
 use AliAMohamad\GeradorDeSenhas\Gerador;
 use AliAMohamad\GeradorDeSenhas\Gerenciador;
+use AliAMohamad\GeradorDeSenhas\Verificador;
 
 
 $gerador = new Gerador();
-$senha = $gerador->gerarSenha(8);
+$senha = $gerador->gerarSenha(12);
 
 var_dump($senha);
 
@@ -17,4 +18,8 @@ $hash = $gerenciador->gerarHashSenha($senha);
 var_dump($hash);
 
 var_dump($gerenciador->checarHash($senha, $hash));
+
+$verificador = new Verificador();
+var_dump($verificador->verificarForCaDaSenha($senha));
+
 ?>
