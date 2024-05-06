@@ -37,7 +37,7 @@ class Gerador
     public function bloquearCaracteres(string $caracteresBloqueados) : void
     {   
         $novaLista = array_merge($this->caracteresBloqueados, str_split($caracteresBloqueados));
-        $this->caracteresBloqueados = array_unique($novaLista); 
+        $this->caracteresBloqueados = array_unique($novaLista);
     }
     
      /**
@@ -54,6 +54,7 @@ class Gerador
         
         $caracteresPermitidos = str_split($stringCaracteresPermitidos);
         $caracteresPermitidos = array_diff($caracteresPermitidos, $this->caracteresBloqueados);
+        $caracteresPermitidos = array_values($caracteresPermitidos);
         $totalCaracteresPermitidos = count($caracteresPermitidos);
         
         $senha = '';
