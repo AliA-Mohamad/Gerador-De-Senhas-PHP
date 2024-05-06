@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "AliaMohamad\\Geradordesenhas\\": "src/"
+            "AliAMohamad\\GeradorDeSenhas\\": "src/"
         }
     },
     "authors": [
