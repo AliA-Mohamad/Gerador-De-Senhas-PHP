@@ -1,21 +1,17 @@
 # Gerador de Senhas
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/AliA-Mohamad/Gerador-De-Senhas-PHP?style=for-the-badge)
 
-> Este não é um projeto para ser usado de forma séria. As senhas geradas podem até ser serguras mas o gerenciador e o verificador não possuem base para usabilidade
+> Este não é um projeto para ser usado de forma séria. As senhas geradas podem até ser seguras, mas o gerenciador e o verificador não possuem base para usabilidade.
 
-## Ajustes e melhorias
+## Ajustes e Melhorias
 
-Para que o projeto possa ser usado ele precisa:
+Para que o projeto possa ser usado, ele precisa:
 
-- [x] Gerar senhas seguras. 
+- [x] Gerar senhas seguras.
 - [ ] Ter uma verificação consistente.
-- [ ] Ter um processo de hasheamento seguro.
-- [ ] Ter uma cryptografia segura.
+- [ ] Ter um processo de hash seguro.
+- [ ] Ter uma criptografia segura.
 
 ## Pré-requisitos
 
@@ -24,20 +20,20 @@ Para que o projeto possa ser usado ele precisa:
 
 ## Instalando
 
-para adicionar o <Gerador_De_Senhas> no seu projeto:
+Para adicionar o `Gerador_De_Senhas` no seu projeto:
 
-Windowns:
+Windows:
 ```bash
 c:\Raiz_Do_projeto> composer require alia-mohamad/geradordesenhas
 ```
 
 ## Usando <Gerador_De_senhas>
 
-Atualmente na verção `1.0.0` você pode usar 3 classses sendo elas:
+Atualmente na versão `1.0.1` você pode usar 3 classses sendo elas:
 
-1. `Gerador` - possue metodos para criar as senhas.
-2. `Gerenciador` - possue metodos para gerar e testar hash das denhas.
-3. `Verificador` - possue um metodo para ver nivel de segurança da senha.
+1. `Gerador` - possui métodos para criar as senhas.
+2. `Gerenciador` - possui métodos para gerar e testar hash das senhas.
+3. `Verificador` - possui um método para ver nível de segurança da senha.
 
 ### Gerador
 
@@ -60,7 +56,7 @@ $senha = $gerador->gerarSenha(16); // Gera uma senha de 16 caracteres
 - `bloquearNormaisAcentuados()` -> Bloqueia que as senhas sejam geradas com caracteres normais acentuadas.
 - `bloquearMaiusculas()` -> Bloqueia que as senhas sejam geradas com caracteres maiúsculos.
 - `bloquearMaiusculasAcentuados()` -> Bloqueia que as senhas sejam geradas com caracteres maiúsculos acentuados.
-- `bloquearNumerias()` -> Bloqueia que as senhas sejam geradas com caracteres numericos.
+- `bloquearNumerias()` -> Bloqueia que as senhas sejam geradas com caracteres numéricos.
 - `bloquearEspecias()` -> Bloqueia que as senhas sejam geradas com caracteres especiais.
 
 ## Gerenciador
@@ -75,7 +71,7 @@ use AliAMohamad\GeradorDeSenhas\Gerenciador;
 $senha = "teste";
 
 $gerenciador = new Gerenciador();
-$hash = $gerenciador->gerarHashSenha($teste); // Agora eu tenho o hash da senha armazenada na variavel.
+$hash = $gerenciador->gerarHashSenha($teste); // Agora eu tenho o hash da senha armazenada na variável.
 
 $verdadeiro = $gerenciador->checarHash($senha, $hash); // A senha corresponde ao hash, retorna verdadeiro.
 $falso = $gerenciador->checarHash("teste2", $hash); // A senha não corresponde ao hash, retorna false.
@@ -99,5 +95,5 @@ $verificador->verificarForcaDaSenha("teste");  // Retorna uma lista dizendo os c
 
 ```
 
-- `verificarForcaDaSenha([senha])` -> verifica a força da senha e rotorna uma lista com os critérios atendidos.
+- `verificarForcaDaSenha([senha])` -> verifica a força da senha e retorna uma lista com os critérios atendidos.
 
