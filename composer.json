@@ -1,6 +1,6 @@
 {
     "name": "alia-mohamad/geradordesenhas",
-    "description": "Pacote com  métodos que geram de senhas configuráveis, métodos de teste de segurança de senhas com base em critérios próprios ou unsando API's externas e métodos que criptografam ou geram hash da senha",
+    "description": "Pacote com  métodos que geram de senhas configuráveis, métodos de teste de segurança de senhas com base em critérios próprios e métodos que criptografam ou geram hash da senha",
     "type": "library",
     "autoload": {
         "psr-4": {

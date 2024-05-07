@@ -9,7 +9,7 @@ class Verificador
         return preg_match('/[a-z]/', $senha) === 1;
     }
 
-    private function verificarLetrasMinusculasAcentoadas(string $senha): bool
+    private function verificarLetrasMinusculasAcentuadas(string $senha): bool
     {
         return preg_match('/[áàâãéèêíïóôõöúçñ]/i', $senha) === 1;
     }
@@ -19,7 +19,7 @@ class Verificador
         return preg_match('/[A-Z]/', $senha) === 1;
     }
 
-    public function verificarLetrasMaiusculasAcentoadas(string $senha) : bool
+    private function verificarLetrasMaiusculasAcentuadas(string $senha) : bool
     {
         return preg_match('/[ÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ]/', $senha) === 1;
     }
@@ -34,20 +34,20 @@ class Verificador
         return preg_match('/[!@#$%&*\-_=:+,.\|?~^`\'\"{}[\]()]/', $senha) === 1;
     }
 
-    public function verificarTamanhoDaSenha(string $senha) : bool
+    private function verificarTamanhoDaSenha(string $senha) : bool
     {
         return strlen($senha) >= 12;
     }
 
 
-    public function verificarForCaDaSenha(string $senha) : array
+    public function verificarForcaDaSenha(string $senha) : array
     {
         $criterios = [
             'tamanho' => $this->verificarTamanhoDaSenha($senha),
             'caracterNormal' => $this->verificarLetrasMinusculas($senha),
-            'caracterNormalAcentoado' => $this->verificarLetrasMinusculasAcentoadas($senha),
+            'caracterNormalAcentuado' => $this->verificarLetrasMinusculasAcentoadas($senha),
             'caracterMaiusculu'=> $this->verificarLetrasMaiusculas($senha),
-            'caracterMaiusculuAcentoado' => $this->verificarLetrasMinusculasAcentoadas($senha),
+            'caracterMaiusculuAcentuado' => $this->verificarLetrasMinusculasAcentoadas($senha),
             'caracterNumerico' => $this->verificarNumeros($senha),
             'caracterEspecial' => $this->verificarCaracteresEspeciais($senha)
         ];

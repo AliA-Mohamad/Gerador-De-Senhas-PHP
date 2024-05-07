@@ -8,7 +8,7 @@ use AliAMohamad\GeradorDeSenhas\Verificador;
 
 
 $gerador = new Gerador();
-$senha = $gerador->gerarSenha(12);
+$senha = $gerador->gerarSenha(16);
 
 var_dump($senha);
 

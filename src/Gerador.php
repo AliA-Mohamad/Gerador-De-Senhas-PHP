@@ -5,9 +5,9 @@ namespace AliAMohamad\GeradorDeSenhas;
 class Gerador
 {
     private $caracteresNormais = "abcdefghijklmnopqrstuvwxyz";
-    private $caracteresNormaisAcentoados = "áàâãéèêíïóôõöúçñ";
+    private $caracteresNormaisAcentuados = "áàâãéèêíïóôõöúçñ";
     private $caracteresMaiusculos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private $caracteresMaiusculosAcentoados = "ÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ";
+    private $caracteresMaiusculosAcentuados = "ÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ";
     private $caracteresNumericos = "0123456789";
     private $caracteresEspeciais = "!@#$%&*-_=:+,./\|?~^`'\"{}[]()";
 
@@ -18,19 +18,19 @@ class Gerador
         $this->bloquearCaracteres($this->caracteresNormais);
     }
     
-    public function bloquearNormaisAcentoados() : void
+    public function bloquearNormaisAcentuados() : void
     {
-        $this->bloquearCaracteres($this->caracteresNormaisAcentoados);
+        $this->bloquearCaracteres($this->caracteresNormaisAcentuados);
     }
 
-    public function bloquearMaiusculos() : void
+    public function bloquearMaiusculas() : void
     {
         $this->bloquearCaracteres($this->caracteresMaiusculos);
     }
 
-    public function bloquearMaiusculosAcentoados() : void
+    public function bloquearMaiusculasAcentuados() : void
     {
-        $this->bloquearCaracteres($this->caracteresMaiusculosAcentoados);
+        $this->bloquearCaracteres($this->caracteresMaiusculosAcentuados);
     }
     
     public function bloquearNumericos() : void
@@ -61,9 +61,9 @@ class Gerador
         $senha = '';
         $tiposCaracteres = [
             $this->caracteresNormais,
-            $this->caracteresNormaisAcentoados,
+            $this->caracteresNormaisAcentuados,
             $this->caracteresMaiusculos,
-            $this->caracteresMaiusculosAcentoados,
+            $this->caracteresMaiusculosAcentuados,
             $this->caracteresNumericos,
             $this->caracteresEspeciais
         ];
